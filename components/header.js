@@ -36,7 +36,7 @@ const Header = () => {
         <div className={styles.button}>
           <div className={styles.contactButton}>
             <Link href="">
-              <a className={styles.navItem}>CONTACT US</a>
+              <a className={styles.contactText}>CONTACT US</a>
             </Link>
           </div>
         </div>
