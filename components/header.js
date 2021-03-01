@@ -1,73 +1,89 @@
 import Image from "next/image";
-import styles from "./header.module.css";
 import Link from "next/link";
+import Head from "next/head";
 const Header = () => {
   return (
     <>
-      <div className={styles.headerTop}>
-        <div className={styles.logo}>
-          <a>
-            <Image src={"/logo.png"} alt="" width={202} height={46} />
-          </a>
+      <Head>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="footer.css" />
+      </Head>
+      <nav className="nav-01 ">
+        <div className="main-nav row mx-0">
+            <div className="col-md-6">
+                <img src='./images/logo.png' alt='Afri Sight' className="main-nav-logo" />
+            </div>
+
+            <div className="right-main-nav col-md-6">
+                <div className="main-nav-input">
+                    <img src='./images/search-dark.png' className="main-nav-search" />
+                     <input className="main-nav-input-field" />
+                </div>
+                <div className="main-nav-en">
+                    <img src='./images/profile.png' className="profile-main-nav" />
+                    <span className="polygon-main-nav">EN</span>
+                    <img src='./images/dropdown.png' className="polygon-main-nav" />
+                </div>
+                <div className="main-nav-contact-div">
+                    <button className="main-nav-contact">
+                        Contact Us
+                    </button>
+                </div>
+            </div>
         </div>
-        <div className={styles.space}></div>
-        <div className={styles.language}>
-          <div className={styles.search}>
-            <Image
-              unoptimized
-              src={"/search.png"}
-              alt=""
-              width={22}
-              height={22}
-            />
-          </div>
-          <div className={styles.circle}></div>
-          <div style={{ marginLeft: "2%" }}>
-            <span style={{ fontSize: "18px" ,fontWeight:'700'}}>EN</span>
-            <Image
-              src={"/polygon.png"}
-              alt=""
-              className={styles.polygon}
-              width={10}
-              height={9}
-            />
-          </div>
+    </nav>
+      <nav className="navbar navbar-expand-lg navbar-light home-navbar text-center">
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul className="navbar-nav">
+            <li className="nav-item active">
+              <Link href="/">
+                <a className="nav-link nav-text" href="">
+                  HOME<span className="sr-only">(current)</span>
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/rawdata">
+                <a className="nav-link nav-text" href="">
+                  RAW DATA
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/aboutus">
+                <a className="nav-link nav-text" href="">
+                  ABOUT US
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/research">
+                <a className="nav-link nav-text" href="">
+                  RESEARCH
+                </a>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link href="/contactus">
+                <a className="nav-link nav-text" href="">
+                  CONTACT US
+                </a>
+              </Link>
+            </li>
+          </ul>
         </div>
-        <div className={styles.button}>
-          <div className={styles.contactButton}>
-            <Link href="">
-              <a className={styles.contactText}>CONTACT US</a>
-            </Link>
-          </div>
-        </div>
-      </div>
-      <div className={styles.container}>
-        <li className={styles.li} key={`nav_1`}>
-          <Link href="">
-            <a className={styles.navItem}>HOME</a>
-          </Link>
-        </li>
-        <li className={styles.li} key={`nav_2`}>
-          <Link href="">
-            <a className={styles.navItem}>RAW DATA</a>
-          </Link>
-        </li>{" "}
-        <li className={styles.li} key={`nav_3`}>
-          <Link href="">
-            <a className={styles.navItem}>RESEARCH</a>
-          </Link>
-        </li>{" "}
-        <li className={styles.li} key={`nav_4`}>
-          <Link href="">
-            <a className={styles.navItem}>ABOUT US</a>
-          </Link>
-        </li>{" "}
-        <li className={styles.li} key={`nav_5`}>
-          <Link href="">
-            <a className={styles.navItem}>CONTACT US</a>
-          </Link>
-        </li>
-      </div>
+      </nav>
     </>
   );
 };

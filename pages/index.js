@@ -3,172 +3,157 @@ import Header from '../components/header';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Afrobarometer</title>
-        <link rel="icon" href="/favicon.ico" />
-        {/* <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' /> */}
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="footer.css" />
       </Head>
       <Header />
       <main>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        .container {
-          min-height: 100vh;
-          padding: 0 0.5rem;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        a {
-          color: inherit;
-          text-decoration: none;
-        }
-
-        .title a {
-          color: #0070f3;
-          text-decoration: none;
-        }
-
-        .title a:hover,
-        .title a:focus,
-        .title a:active {
-          text-decoration: underline;
-        }
-
-        .title {
-          margin: 0;
-          line-height: 1.15;
-          font-size: 4rem;
-        }
-
-        .title,
-        .description {
-          text-align: center;
-        }
-
-        .description {
-          line-height: 1.5;
-          font-size: 1.5rem;
-        }
-
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
-            DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-        }
-
-        .grid {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-wrap: wrap;
-
-          max-width: 800px;
-          margin-top: 3rem;
-        }
-
-        .card {
-          margin: 1rem;
-          flex-basis: 45%;
-          padding: 1.5rem;
-          text-align: left;
-          color: inherit;
-          text-decoration: none;
-          border: 1px solid #eaeaea;
-          border-radius: 10px;
-          transition: color 0.15s ease, border-color 0.15s ease;
-        }
-
-        .card:hover,
-        .card:focus,
-        .card:active {
-          color: #0070f3;
-          border-color: #0070f3;
-        }
-
-        .card h3 {
-          margin: 0 0 1rem 0;
-          font-size: 1.5rem;
-        }
-
-        .card p {
-          margin: 0;
-          font-size: 1.25rem;
-          line-height: 1.5;
-        }
-
-        .logo {
-          height: 1em;
-        }
-
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
-          }
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
-            Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-            sans-serif;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
+      <div className="home--header ">
+        <div className="container">
+            <div className="row mx-0">
+                <div className="col-md-7">
+                    <div className="home--content">
+                        <div className='home--heading'>Afrobarometer</div>
+                        <div className="home--author">
+                            Afrobarometer is a data-collection company dedicated to Africa.
+                            The company enables the collection and the delivery of on-demand, real-time, cost-effective,
+                            and
+                            reliable Africa
+                            consumer data and insights.
+                        </div>
+                        <div className="home---button-div">
+                            <button className="home---button">
+                                Download
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div className="col-md-5 home-photo">
+                    <img src='./images/picture02.png' alt='photo' className="home-image" />
+                </div>
+            </div>
+        </div>
     </div>
+    <div className="home-second-header ">
+        <div className="container">
+            <div className="row mx-0">
+                <div className="col-md-6">
+                    <div className="home-second-content">
+                        <img src='./images/contactUs.png' alt='photo' />
+                    </div>
+                </div>
+                <div className="col-md-6 ">
+                    <div className='home--heading'>About Afrobarometer</div>
+                    <div className="home--author">
+                        When we launched in 2017, our mission was very clear: to bridge that gap of quality, real time
+                        and
+                        cost-effective
+                        availability of first-party data to businesses and researchers interested in gaining insights
+                        about
+                        the Africa consumers
+                        and business landscape. Today, AfriSight is the leading, Africa-focused sample panel providers
+                        with
+                        a growing panelist
+                        community across the African continent.
+                        <br /><br />
+                        We are employing technology and a unique market experience to provide solutions that aptly meet
+                        the
+                        needs of clients
+                        including research agencies, advertising agencies, corporates and SMEs, NGOs, government
+                        agencies
+                        and parastatals,
+                        educational institutions and even other sample panel providers with little or no footprint in
+                        Africa.
+                        <br /><br />
+                        AfriSight changing the game in Africa!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div className="home-third-header ">
+            <div className="row mx-0">
+                <div className="col-md-6">
+                    <div className="home-third-content">
+                        <div className='home--heading'>challenge</div>
+                        <div className="home--author">
+                            We are employing technology and a unique market experience to provide solutions that aptly
+                            meet
+                            the needs of clients
+                            including research agencies, advertising agencies, corporates and SMEs, NGOs, government
+                            agencies and parastatals,
+                            educational institutions and even other sample panel providers with little or no footprint
+                            in
+                            Africa.
+                            <br />
+                            AfriSight changing the game in Africa!
+                        </div>
+
+                    </div>
+                </div>
+                <div className="col-md-6 ">
+                    <img src='./images/aboutus_laptop.png' alt='photo' className="home-image" />
+                </div>
+            </div>
+        </div>
+
+        <div className="home-fourth-header ">
+            <div className="row mx-0">
+                <div className="col-md-6">
+                    <div className="home-fourth-content">
+                        <img src='./images/blank_square.png' alt='photo' className="home-image" />
+                    </div>
+                </div>
+                <div className="col-md-6 ">
+                    <div className='home--heading'>Solution</div>
+                    <div className="home--author">
+                        We are employing technology and a unique market experience to provide solutions that aptly meet
+                        the
+                        needs of clients
+                        including research agencies, advertising agencies, corporates and SMEs, NGOs, government
+                        agencies
+                        and parastatals,
+                        educational institutions and even other sample panel providers with little or no footprint in
+                        Africa.
+                        <br />
+                        AfriSight changing the game in Africa!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div className="footer">
+        <div className="footer-logo">
+            <img src='./images/logo.png' alt="logo" className="footer-logo-img" />
+        </div>
+        <div className="footer-row">
+            <div>
+                <a href="./index.html" className="footer-labels">Home</a>
+            </div>
+            <div>
+                <a href="./Research.html" className="footer-labels">Research</a>
+            </div>
+            <div>
+                <a href="./AboutUs.html" className="footer-labels">About Us</a>
+            </div>
+            <div>
+                <a href="./ContactUs.html" className="footer-labels">Contact Us</a>
+            </div>
+        </div>
+        <div className="footer-privacy row mx-0">
+            <div className="col-md-8 footer-color">
+                Copyright © 2021 AfriSight B.V. All rights reserved
+            </div>
+            <div className="col-md-4 footer-color">
+                Privacy policy
+            </div>
+        </div>
+    </div>
+      </main>
+    </>
   )
 }

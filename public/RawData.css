@@ -1,0 +1,199 @@
+.rawData_header{
+  background: url(./images/curvedbg.png); 
+  background-size: cover;
+  width: 100%;
+ height: 533px; 
+}
+.rawData-content{
+    padding-left: 88px;
+    padding-top: 136px;
+    padding-bottom: 5px;
+}
+.rawData-heading{ 
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 67px;
+    color: #002628;
+ }
+
+.rawData-paragraph{
+    padding-top: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #004549;
+}
+
+.rawData-button-div{
+     padding-top: 20px;
+}
+
+.rawData-button{
+    width: 152px;
+    height: 48px;
+    background-color: #137DAB;
+    box-shadow: 2px 4px 8px rgba(0, 38, 40, 0.15);
+    border-radius: 8px;
+    color: #fff;
+    border: 1px solid #137DAB;
+}
+
+button:focus {
+    outline: none !important;
+}
+input:focus{
+     outline: none !important;
+}
+
+.image-raw{
+    padding-top: 136px;
+}
+.rawdata-img{
+    height: 288px;
+    background: linear-gradient(110.15deg, #148DC0 6.58%, rgba(20, 141, 192, 0) 90.5%);
+    border-radius: 4px;
+}
+
+.rawData-second-portion{
+    text-align: center;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 56px;
+    line-height: 67px;
+    color: #1B2435;
+    margin: 20px 0px;
+}
+
+.insight-heading{
+   font-style: normal;
+   font-weight: bold;
+   font-size: 24px;
+   line-height: 150%;
+   color: #002628;
+}
+
+.insight-research-date{
+   font-style: normal;
+   font-weight: normal;
+   font-size: 18px;
+   line-height: 150%;
+   color: #004549;
+}
+
+.insight-text{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+    color: #004549;
+}
+
+.insight-footer{
+    display: flex;
+}
+
+.insight-share{
+     font-style: normal;
+     font-weight: normal;
+     font-size: 18px;
+     line-height: 150%;
+     text-transform: uppercase;
+     color: #137DAB;
+}
+.insight{
+    background: #F3F5F5;
+    border-radius: 4px;
+    margin: 2px;
+}
+
+.insight-icons{
+    margin-left: 30px;
+    margin-top: -4px;
+}
+
+.insta-icon{
+    padding: 0px 10px;
+}
+
+.insight-image{
+    text-align: center;
+}
+
+.insight-cards-second-row{
+    margin-top: 25px;
+}
+
+.text-button{
+   font-style: normal;
+   font-weight: bold;
+   font-size: 24px;
+   line-height: 29px;
+   text-align: center;
+   text-transform: capitalize;
+   color: #004549;
+   margin: 20px 0px;
+}
+
+.rawdata-buttons{
+    /* height: 40px; */
+    padding: 7px 20px;
+    box-sizing: border-box;
+    border-radius: 24px;
+    font-style: normal;
+    /* font-weight: bold; */
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 16px;
+    background-color: #fff !important;
+}
+
+.selected-btn{
+    border: 2px solid #137DAB;
+    color:  #137DAB;
+    text-transform: uppercase;
+}
+
+.non-selected-btn{
+    border: 2px solid #8A979C;
+    color: #8A979C;
+    text-transform: uppercase;
+}
+
+.left-rawdata-div{
+    padding: 0px 50px;
+}
+
+.input-field-searchbyname{
+    background: #E9F1F3;
+    border-radius: 16px;
+    height: 40px;
+    width: 208px;
+    text-align: center;
+    border: 2px solid #E9F1F3 ;
+}
+
+.search-icon{
+    position: absolute;
+    top: 8px;
+    padding-left: 10px;
+}
+.show-all-div{
+    margin: 2px 20px;
+} 
+.checkbox-icon{
+    padding: 2px 7px 12px 10px;
+    background: #E9F1F3;
+    border-radius: 2px;
+}
+.show{
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 19px;
+color: #004549;
+margin-left: 10px;
+}

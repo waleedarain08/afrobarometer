@@ -1,0 +1,126 @@
+.research_header{
+  background: url(./images/curvedbg.png); 
+  background-size: cover;
+  width: 100%;
+ height: 533px; 
+}
+.research-content{
+    padding-left: 88px;
+    padding-top: 136px;
+    padding-bottom: 5px;
+}
+.research-heading{ 
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 67px;
+    color: #002628;
+ }
+.research-paragraph{
+    padding-top: 16px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #004549;
+}
+.research-button-div{
+     padding-top: 20px;
+}
+.research-button{
+    width: 152px;
+    height: 48px;
+    background-color: #137DAB;
+    box-shadow: 2px 4px 8px rgba(0, 38, 40, 0.15);
+    border-radius: 8px;
+    color: #fff;
+    border: 1px solid #137DAB;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+/************* second part europe *************/
+
+.research-second-header{
+    background: url(./images/background1.png); 
+    background-size: cover;
+    width: 100%;
+    /* height: 533px;  */
+    margin-top: 80px; 
+}
+
+.research-second-content{
+    padding-left: 88px;
+    padding-top: 72.19px;
+}
+.photo{
+  padding-top: 72.19px;  
+  padding-bottom: 25px;
+  text-align: center;
+}
+.second-image{
+ height: 300px;
+  width: 298px;
+}
+.research-second-heading{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 56px;
+    line-height: 67px;
+    color: #002628;
+}
+
+.Research-second-author{
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 18px;
+   line-height: 150%;
+   /* or 27px */
+   padding-top: 22px;
+}
+.research--second-button-div{
+    padding-top: 24px;
+     padding-bottom: 5px;
+}
+.research--second-button{
+   width: 152px;
+   height: 48px;
+   background-color: #137DAB;
+   box-shadow: 2px 4px 8px rgba(0, 38, 40, 0.15);
+   border-radius: 8px;
+   color: #fff;
+   border: 1px solid #137DAB;
+}
+.blue-icons{
+    padding-top: 12px;
+   padding-bottom: 25px;
+}
+
+.instagram-icon{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+
+/************* third part europe *************/
+
+.research-third-header{
+  background: url(./images/pink-background.png); 
+  background-size: cover;
+  width: 100%;
+  /* height: 533px; */
+  margin-top: 80px;   
+}
+
+/************* fourth part europe *************/
+
+.research-fourth-header{
+ background: url(./images/bluebg.png); 
+  background-size: cover;
+  width: 100%;
+  /* height: 533px; */
+  margin-top: 80px;     
+}

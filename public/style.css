@@ -1,0 +1,101 @@
+.home--header{
+    background: url(./images/background1.png); 
+    background-size: cover;
+    width: 100%;
+    height: 490px;
+    /* height: 533px;  */
+    /* margin-top: 80px;  */
+}
+
+.home--content{
+    /* padding-left: 88px; */
+    padding-top: 100px;
+    padding-bottom: 20px;
+}
+.photo{
+  padding-top: 72.19px;  
+  padding-bottom: 25px;
+  text-align: center;
+}
+.-image{
+ height: 300px;
+  width: 298px;
+}
+.home--heading{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 53px;
+    line-height: 67px;
+    color: #002628;
+}
+
+.home--author{
+   font-family: Roboto;
+   font-style: normal;
+   font-weight: normal;
+   font-size: 16px;
+   line-height: 150%;
+   /* or 27px */
+   padding-top: 22px;
+}
+.home---button-div{
+    padding-top: 24px;
+     padding-bottom: 5px;
+}
+.home---button{
+   width: 152px;
+   height: 48px;
+   background-color: #137DAB;
+   box-shadow: 2px 4px 8px rgba(0, 38, 40, 0.15);
+   border-radius: 8px;
+   color: #fff;
+   border: 1px solid #137DAB;
+}
+.blue-icons{
+    padding-top: 12px;
+   padding-bottom: 25px;
+}
+
+.instagram-icon{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.home-second-content{
+    text-align: center;
+    
+}
+.home-second-header{
+    padding-top: 200px;
+}
+
+.home-third-header{
+    margin-top: 200px;
+}
+
+.home-fourth-header{
+    margin-top: 200px;
+}
+
+.home--author{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 150%;
+    color: #004549;
+
+}
+
+.home-photo{
+    margin: auto;
+    text-align: center;
+    padding-top: 55px;
+}
+
+.home-image{
+
+width: 100%;
+height: 368px;
+background: linear-gradient(110.15deg, #148DC0 6.58%, rgba(20, 141, 192, 0) 90.5%);
+border-radius: 4px;
+
+}
