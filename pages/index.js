@@ -15,7 +15,7 @@ export default function Home() {
         <div className="home--header ">
           <div className="container">
             <div className="row mx-0">
-              <div className="col-md-7">
+              <div className="col-md-7 col-12">
                 <div className="home--content">
                   <div className="home--heading">Afrobarometer</div>
                   <div className="home--author">
@@ -29,7 +29,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-5 home-photo">
+              <div className="col-md-5 home-photo col-12">
                 <img
                   src="./images/picture02.png"
                   alt="photo"
@@ -44,7 +44,7 @@ export default function Home() {
           <div className="home-second-header ">
             <div className="main-div ">
               <div className="row mx-0">
-                <div className="col-md-5">
+                <div className="col-md-5 col-12">
                   <div className="home-second-content">
                     <img
                       src="./images/contactUs.png"
@@ -53,7 +53,7 @@ export default function Home() {
                     />
                   </div>
                 </div>
-                <div className="col-md-7 second-div-home-right">
+                <div className="col-md-7 col-12 second-div-home-right">
                   <div className="home--heading">About Afrobarometer</div>
                   <div className="home-second-author">
                     When we launched in 2017, our mission was very clear: to
@@ -82,7 +82,7 @@ export default function Home() {
             <div className="home-third-header ">
               <div className="main-div">
                 <div className="row mx-0">
-                  <div className="col-md-6">
+                  <div className="col-md-6 col-12">
                     <div className="home-third-content">
                       <div className="home--heading">Challenge</div>
                       <div className="home-third-author">
@@ -99,7 +99,7 @@ export default function Home() {
                       </div>
                     </div>
                   </div>
-                  <div className="col-md-6 home-third-image ">
+                  <div className="col-md-6 col-12 home-third-image ">
                     <img
                       src="./images/aboutus_laptop.png"
                       alt="photo"
@@ -113,7 +113,7 @@ export default function Home() {
             <div className="home-fourth-header ">
               <div className="main-div">
                 <div className="row mx-0">
-                  <div className="col-md-6">
+                  <div className="col-md-6 col-12">
                     <div className="home-fourth-image">
                       <img
                         src="./images/picture01.png"
@@ -122,7 +122,7 @@ export default function Home() {
                       />
                     </div>
                   </div>
-                  <div className="col-md-6 ">
+                  <div className="col-md-6 col-12">
                     <div className="home-third-content">
                       <div className="home--heading">Solution</div>
                       <div className="home-third-author">
@@ -147,7 +147,7 @@ export default function Home() {
         <div className="home-fifth-row">
           <div className="main-div">
             <div className="row">
-              <div className="col-md-3 blue-box">
+              <div className="col-md-3 col-12 blue-box">
                 <div className="blue-div">
                   <div className="blue-div-content">
                     <div className="blue-div-heading">91%</div>
@@ -158,7 +158,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 blue-box">
+              <div className="col-md-3 col-12 blue-box">
                 <div className="blue-div">
                   <div className="blue-div-content">
                     <div className="blue-mid-paragraph">
@@ -168,7 +168,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 blue-box">
+              <div className="col-md-3 col-12 blue-box">
                 <div className="blue-div">
                   <div className="blue-div-content">
                     <div className="blue-mid-paragraph">
@@ -178,7 +178,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-3 blue-box">
+              <div className="col-md-3 col-12 blue-box">
                 <div className="blue-div">
                   <div className="blue-div-content">
                     <div className="blue-div-heading Important-heading">
@@ -194,6 +194,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
         <div className="charts-div">
           <div>
             <div className="row mx-0 charts ">
@@ -211,6 +212,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+
         <div className="main-div">
           <div>
             <div className="row mx-0 charts ">
@@ -224,7 +226,7 @@ export default function Home() {
 
         <div className="research-second-header ">
           <div className="row mx-0">
-            <div className="col-md-7">
+            <div className="col-md-7 col-12">
               <div className="research-second-content">
                 <div className="research-second-heading">
                   Some title of research
@@ -233,9 +235,7 @@ export default function Home() {
                   Research by: Author Name
                 </div>
                 <div className="research--second-button-div">
-                  <button className="research--second-button">
-                    GET RESEARCH
-                  </button>
+                  <button className="research--second-button">GET RESEARCH</button>
                 </div>
                 <div className="Research-second-author  padding-top">
                   SHARE RESEARCH
@@ -251,7 +251,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="col-md-5 photo">
+            <div className="col-md-5 col-12 photo">
               <img
                 src="./images/picture01.png"
                 alt="photo"
