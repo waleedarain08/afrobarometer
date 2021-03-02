@@ -44,36 +44,68 @@ button:focus {
 /************* second part europe *************/
 
 .research-second-header{
-    background: url(./images/background1.png); 
-    background-size: cover;
+   background: #FAF6EC;
     width: 100%;
-    /* height: 533px;  */
-    margin-top: 80px; 
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin-top: 50px; 
 }
 
 .research-second-content{
     padding-left: 88px;
-    padding-top: 72.19px;
+  padding-top: 25.19px;
 }
-.photo{
-  padding-top: 72.19px;  
-  padding-bottom: 25px;
-  text-align: center;
+.photo-01{
+background: url(./images/picture02.png);
+width: 416px;
+height: 256px;
+background-size: cover;
+}
+
+.photo-02{
+background: url(./images/picture04.png);
+width: 416px;
+height: 256px;
+background-size: cover;
+}
+
+.photo-03{
+background: url(./images/picture03.png);
+width: 416px;
+height: 256px;
+background-size: cover;
+}
+
+.gradient-content-02-03{
+    width: 402px !important;
+}
+
+.gradient-content{
+    position: absolute;
+    bottom: 14px !important;
+    padding: 0px 23px 18px;
+    background: linear-gradient(180deg, rgba(4, 46, 64, 0) 49.24%, #042E40 100%), url(photo-1604196623307-68af091edbc6.jpg);
+    filter: drop-shadow(1px 3px 2px rgba(0, 55, 79, 0.04)), drop-shadow(2px 4px 8px rgba(0, 38, 40, 0.15));
+    border-radius: 4px;
+    width: 413px;
+    margin-left: 5px;
+     background-size: cover;
+     color: #fff !important;
 }
 .second-image{
- height: 300px;
-  width: 298px;
+ width: 416px;
+height: 256px;
 }
-.research-second-heading{
-    font-style: normal;
-    font-weight: 800;
-    font-size: 56px;
-    line-height: 67px;
-    color: #002628;
+.research-second-heading{  
+font-style: bold;
+font-weight: bold;
+font-size: 40px;
+line-height: 60px;
+
+color: #002628;
 }
 
 .Research-second-author{
-   font-family: Roboto;
    font-style: normal;
    font-weight: normal;
    font-size: 18px;
@@ -95,32 +127,43 @@ button:focus {
    border: 1px solid #137DAB;
 }
 .blue-icons{
-    padding-top: 12px;
-   padding-bottom: 25px;
+   padding-top: 78.19px;
+    padding-bottom: 25px;
+    text-align: center;
+    padding-left: 25px;
 }
 
-.instagram-icon{
-    margin-left: 25px;
-    margin-right: 25px;
-}
 
+.research-icons{
+   display: flex;
+}
 
 /************* third part europe *************/
 
 .research-third-header{
-  background: url(./images/pink-background.png); 
-  background-size: cover;
-  width: 100%;
-  /* height: 533px; */
-  margin-top: 80px;   
+background: #E3F4F8;
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin-top: 50px; 
 }
 
 /************* fourth part europe *************/
 
 .research-fourth-header{
- background: url(./images/bluebg.png); 
-  background-size: cover;
-  width: 100%;
-  /* height: 533px; */
-  margin-top: 80px;     
+ background: #FAF6EC;
+    width: 100%;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    margin-top: 50px; 
+}
+.blue-icons-right{
+ padding-top: 78.19px;
+    padding-bottom: 25px;
+    text-align: center;
+    padding-right: 25px;
+}
+.research-icons-third{
+display: flex;
+padding-left: 50px;
 }

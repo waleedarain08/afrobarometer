@@ -67,3 +67,7 @@
     min-width: 195px;
     text-align: center;
 }
+.curved-line{
+    display: flex;
+    justify-content: center;
+}

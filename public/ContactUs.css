@@ -26,6 +26,7 @@
     font-weight: normal;
     font-size: 18px;
     line-height: 150%;
+        padding-left: 11px;
     /* or 27px */
     color: #004549;
 }
@@ -41,8 +42,18 @@
     width: 256px;
 }
 .form-control{
-    height: 40px !important;
-    background: #DFDFDF !important;
+    height: 48px !important;
+    background: #fff !important;
+    border: 1px solid #137DAB;
+box-sizing: border-box;
+border-radius: 4px;
+}
+.textarea{
+    background: #fff !important;
+    border: 1px solid #137DAB;
+box-sizing: border-box;
+border-radius: 4px;
+width: 527px;
 }
 .no-padding{
     padding-left: 0px !important;
@@ -67,10 +78,43 @@
     background-color:  #E7F9FD;
 }
 .contactUs-third{
-    margin-top: 100px;
+  
+     margin: 70px 298px;
+    border-radius: 10px;
 }
 .card{
     margin-top: 60px;
+    margin-left: 65px;
     margin-bottom: 60px;
     border: none;
+    margin-right: 65px;
+
+}
+.curved-line{
+    display: flex;
+    justify-content: center;
+}
+.map-icon{
+    height: 34px;
+    width: 24px;
+}
+.bold-text{
+    font-style:bold
+}
+.contact-vector{
+    background-size: cover;
+    background:url(./images/contactvector.png);
+}
+.home---button-div{
+    padding-top: 24px;
+     padding-bottom: 5px;
+}
+.home---button{
+   width: 152px;
+   height: 48px;
+   background-color: #137DAB;
+   box-shadow: 2px 4px 8px rgba(0, 38, 40, 0.15);
+   border-radius: 8px;
+   color: #fff;
+   border: 1px solid #137DAB;
 }
