@@ -82,14 +82,14 @@
     }
 
     /*---- Second content part start ---*/
-    .background-vector .home-second-header {
-    }
+    
 
     .background-vector .home-second-header .main-div {
         padding: 30px 2px 30px !important;
     }
 
     .background-vector .home-second-header .main-div .home-second-content {
+        margin-top: 300px;
     }
 
     .background-vector .home-second-header .main-div .home-second-content .second-home-photo {
