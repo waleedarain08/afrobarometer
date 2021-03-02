@@ -231,6 +231,7 @@ export default function RawData() {
           </div>
         </div>
       </div>
+      <div style={{height:"130px"}}></div>
       <Footer />
     </>
   );
