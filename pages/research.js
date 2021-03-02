@@ -164,6 +164,7 @@ export default function Research() {
           </div>
         </div>
       </div>
+      <div style={{height:"130px"}}></div>
       <Footer />
     </>
   );
