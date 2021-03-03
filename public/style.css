@@ -129,7 +129,6 @@
   width: 440px;
   height: 344px;
 
-  background: url(/image.png);
   /* Drop Shadow */
 
   filter: drop-shadow(2px 4px 8px rgba(0, 0, 0, 0.2));
@@ -145,7 +144,7 @@
   margin: auto;
 }
 .blue-div {
-  width: 288px;
+  width: 270px;
   height: 392px;
   background: #0573a3;
   border-radius: 4px;
@@ -154,7 +153,7 @@
   padding: 105px 24px;
 }
 .blue-div-heading {
-  /* font-family: Poppins !important; */
+  font-family: Poppins !important;
   font-style: normal;
   font-weight: bold;
   font-size: 58px;
@@ -184,7 +183,7 @@
 }
 
 .Important-heading {
-  font-size: 48px;
+  font-size: 2rem;
 }
 .charts-div {
   margin-top: 100px;
@@ -278,4 +277,11 @@
 }
 .padding-top {
   padding-top: 50px;
+}
+.polygon-main-nav{
+  margin-left: 5px;
+}
+.nav-item{
+  margin-left:10px;
+  margin-right:10px;
 }
