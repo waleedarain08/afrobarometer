@@ -13,29 +13,38 @@ export default function AboutUs() {
       </Head>
       <Header />
       <div className="researchTopic_header">
-        <div className="researchTopic-content">Name of research</div>
-        <div className="subtext">
-          <p>Fedruary 2021</p>
+        <div className="container">
+          <div className="researchTopic-content">Name of research</div>
+          <div className="subtext">
+            <p>Fedruary 2021</p>
+          </div>
         </div>
       </div>
 
       <div className="row mx-0">
-        <div className="col-md-3">
+        <div className="col-md-4">
           <div className="container left-box align-text">
             <div className="authorname">Author Name</div>
             <div className="authorposition">Position</div>
             <div className="icons">
               <img src="./images/Facebook.png" alt="facebook" />
-              <img src="./images/Twitter.png" alt="twitter" />
-              <img src="./images/Twitter.png" alt="twitter" />
+              <img
+                src="./images/Twitter.png"
+                alt="twitter"
+                className="twittericon"
+              />
+              <img src="./images/Googlegra.png" alt="google +" />
+            </div>
+            <div className="research-button">
+              <button className="transparent-button">Subscribe</button>
             </div>
           </div>
         </div>
-        <div className="col-md-9">
+        <div className="col-md-8">
           <div className="container">
             <div className="researchTopic-second-row ">
               <div className="row mx-0">
-                <img src="./images/research01.png" />
+                <img src="./images/research01.png" className="research-topic-img" />
               </div>
             </div>
           </div>
@@ -62,12 +71,13 @@ export default function AboutUs() {
 
           <br />
           <br />
-          <div className="researchTopic-content-read">Read Full Research</div>
-
+          <div className="container">
+            <div className="researchTopic-content-read">Read Full Research</div>
+          </div>
           <div className="researchTopic-second-row">
             <div className="container">
               <div className="row mx-0">
-                <div className="card text-left ">
+                <div className="card-research-topic text-left ">
                   <div className="card-body">
                     <form>
                       <div className="row mx-0">
@@ -109,7 +119,7 @@ export default function AboutUs() {
                             name="abc"
                             value="abc"
                           />
-                          <label htmlFor="abc">
+                          <label htmlFor="abc" style={{marginLeft:"5px"}}>
                             I have read and accepted the Privacy Policy*
                           </label>
                         </div>
@@ -118,11 +128,11 @@ export default function AboutUs() {
                         <div className="form-group col-md-12 no-padding">
                           <input
                             type="checkbox"
-                            id="xyz"
+                            id="abc"
                             name="abc"
                             value="abc"
                           />
-                          <label htmlFor="abc">
+                          <label htmlFor="abc" style={{marginLeft:"5px"}}>
                             I would like to receive news, updates and thought
                             leadership once in a while
                           </label>
@@ -140,8 +150,13 @@ export default function AboutUs() {
               </div>
             </div>
           </div>
+
+          <div className="research-button">
+            <button className="transparent-button">back to overview</button>
+          </div>
         </div>
       </div>
+
       <Footer />
     </>
   );

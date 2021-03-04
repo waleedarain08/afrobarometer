@@ -28,6 +28,7 @@
   width: 298px;
 }
 .home--heading {
+  font-family: Lato;
   font-style: normal;
   font-weight: 800;
   font-size: 53px;
@@ -36,6 +37,7 @@
 }
 
 .home--author {
+  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -56,8 +58,8 @@
   color: #fff;
   border: 1px solid #137dab;
 }
-.blue-icons {
-  padding-top: 12px;
+.blue-icons-style {
+  padding-top: 7%;
   padding-bottom: 25px;
 }
 
@@ -95,6 +97,7 @@
 }
 .home-second-author {
   padding-top: 10px;
+  font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 17px;
@@ -115,6 +118,7 @@
 }
 .home-third-author {
   padding-top: 10px;
+  font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -136,15 +140,12 @@
 }
 
 .home-third-image {
-  padding: 0px;
-  padding-left: 60px;
 }
 
 .home-fifth-row {
   margin: auto;
 }
 .blue-div {
-  width: 270px;
   height: 392px;
   background: #0573a3;
   border-radius: 4px;
@@ -153,7 +154,7 @@
   padding: 105px 24px;
 }
 .blue-div-heading {
-  font-family: Poppins !important;
+  /* font-family: Poppins !important; */
   font-style: normal;
   font-weight: bold;
   font-size: 58px;
@@ -162,6 +163,7 @@
   color: #ffffff;
 }
 .blue-div-paragraph {
+  font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -171,6 +173,7 @@
 }
 
 .blue-mid-paragraph {
+  font-family: Lato;
   font-style: normal;
   font-weight: normal;
   font-size: 22px;
@@ -194,6 +197,7 @@
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
+  font-family: Lato;
   font-style: normal;
   font-weight: 800;
   font-size: 36px;
@@ -224,16 +228,13 @@
   padding-left: 88px;
   padding-top: 72.19px;
 }
-.photo {
-  padding-top: 72.19px;
-  padding-bottom: 25px;
-  text-align: center;
-}
+
 .second-image {
   height: 300px;
   width: 298px;
 }
 .research-second-heading {
+  font-family: Lato;
   font-style: normal;
   font-weight: 800;
   font-size: 56px;
@@ -242,7 +243,7 @@
 }
 
 .Research-second-author {
-  font-family: inherit;
+  font-family: Roboto;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -262,10 +263,6 @@
   color: #fff;
   border: 1px solid #137dab;
 }
-.blue-icons {
-  padding-top: 12px;
-  padding-bottom: 25px;
-}
 
 .instagram-icon {
   margin-left: 25px;
@@ -282,6 +279,5 @@
   margin-left: 5px;
 }
 .nav-item{
-  margin-left:10px;
-  margin-right:10px;
+  margin:0px 10px 0px 10px;
 }

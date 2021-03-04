@@ -17,6 +17,7 @@ export default function AboutUs() {
           <img src="./images/curveunderline.png" alt="" />
         </div>
       </div>
+
       <div className="aboutUs-second-row ">
         <div className="row mx-0">
           <div className="col-md-7">
@@ -48,11 +49,12 @@ export default function AboutUs() {
             <img
               src="./images/aboutus_laptop.png"
               alt="photo"
-              className="laptop-image"
+              className="about-laptop-image"
             />
           </div>
         </div>
       </div>
+
       <div className="aboutUs-third-row ">
         <div className="aboutUs-our_partners">Our Partners</div>
         <div className="partners-logo">
@@ -83,7 +85,7 @@ export default function AboutUs() {
           />
         </div>
       </div>
-      <div style={{marginTop:"2%"}}></div>
+      <div style={{ marginTop: "3%" }}></div>
       <Footer />
     </>
   );

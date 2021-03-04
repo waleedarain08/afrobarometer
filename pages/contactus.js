@@ -12,7 +12,6 @@ export default function ContactUs() {
         <title>Contact Us</title>
       </Head>
       <Header />
-
       <div className="contactUs_header">
         <div className="contactUs-content">Contact Us</div>
         <div className="curved-line">
@@ -55,12 +54,13 @@ export default function ContactUs() {
             </div>
           </div>
         </div>
+
         <div className="contactUs-third">
           <div className="container">
-            <div className="row mx-0 contactUs-third-row ">
-              <div className="card text-left ">
+            <div className="container">
+              <div className="card text-left">
                 <div className="card-body contactUs-third-row">
-                  <form>
+                  <form className="container">
                     <div className="row mx-0">
                       <div className="col-md-6 mx-0 no-padding">
                         <div className="form-group">
@@ -101,39 +101,6 @@ export default function ContactUs() {
                         ></textarea>
                       </div>
                     </div>
-                    <br />
-                    <br />
-                    <div className="row mx-0">
-                      <div className="form-group col-md-12 no-padding">
-                        <input
-                          type="checkbox"
-                          id="abc"
-                          name="abc"
-                          value="abc"
-                        />
-                        <label htmlFor="abc">
-                          I have read and accepted the Privacy Policy*
-                        </label>
-                      </div>
-                    </div>
-                    <div className="row mx-0">
-                      <div className="form-group col-md-12 no-padding">
-                        <input
-                          type="checkbox"
-                          id="xyz"
-                          name="abc"
-                          value="abc"
-                        />
-                        <label htmlFor="abc">
-                          I would like to receive news, updates and thought
-                          leadership once in a while
-                        </label>
-                        <br />
-                      </div>
-                    </div>
-                    <br />
-                    <br />
-
                     <div className="home---button-div">
                       <button className="home---button">SUBMIT</button>
                     </div>
@@ -143,8 +110,10 @@ export default function ContactUs() {
             </div>
           </div>
         </div>
+
+      <Footer />
       </div>
-      <Footer/>
+
     </>
   );
 }

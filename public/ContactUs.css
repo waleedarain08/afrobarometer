@@ -6,6 +6,7 @@
 }
 .contactUs-content{
     text-align: center;
+    font-family: Lato;
     font-style: normal;
     font-weight: 900;
     font-size: 56px;
@@ -20,8 +21,14 @@
 .contactUs-photo{
     text-align: center;
 }
+
+.laptop-image{
+    width: 544px !important;
+
+}
 .contactUs-subheading-content{
     padding-right: 31px;
+    font-family: Lato;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -31,6 +38,7 @@
     color: #004549;
 }
 .contactUs-subheading{
+    font-family: Lato;
     font-style: normal;
     font-weight: 800;
     font-size: 36px;
@@ -39,7 +47,7 @@
 
 }
 .form-group{
-    width: 256px;
+    width: 100%;
 }
 .form-control{
     height: 48px !important;
@@ -53,12 +61,13 @@ border-radius: 4px;
     border: 1px solid #137DAB;
 box-sizing: border-box;
 border-radius: 4px;
-width: 527px;
+ width: 100%;
 }
 .no-padding{
     padding-left: 0px !important;
 }
 .contact-label{
+    font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -76,19 +85,25 @@ width: 527px;
 }
 .contactUs-third-row{
     background-color:  #E7F9FD;
+    width: 708px;
+    /* border: 2px solid; */
+    margin: 25px 110px;
+    box-shadow: 1px 4px 2px rgba(0, 54, 75, 0.15), 1px 4px 10px rgba(19, 125, 171, 0.25);
+    border-radius: 4px;
 }
 .contactUs-third{
   
-     margin: 70px 298px;
+    width: 100%;
     border-radius: 10px;
 }
 .card{
     margin-top: 60px;
     margin-left: 65px;
     margin-bottom: 60px;
-    border: none;
+    /* border: none; */
     margin-right: 65px;
-
+     width: 100%;
+      border: 0px solid !important ;
 }
 .curved-line{
     display: flex;
@@ -118,3 +133,51 @@ width: 527px;
    color: #fff;
    border: 1px solid #137DAB;
 }
+
+
+@media (max-width: 576px) {
+    .card {
+    margin-top: 60px;
+    margin-left: 0px;
+    margin-bottom: 60px;
+    border: 0px solid !important;
+    margin-right: 0px;
+    width: 100%;
+}
+
+.contactUs-third-row{
+ background-color:  #E7F9FD !important;
+    width: 100%;
+      margin: 0px ;
+ 
+    box-shadow: 1px 4px 2px rgba(0, 54, 75, 0.15), 1px 4px 10px rgba(19, 125, 171, 0.25) !important;
+    border-radius: 4px !important;
+}
+}
+
+@media (min-width: 992px) {
+         .laptop-image{
+    width: 100%;
+    
+}
+    .form-group{
+    width: 100% !important;
+}
+}
+
+@media only screen and (max-device-width: 480px) {
+       /* styles for mobile browsers smaller than 480px; (iPhone) */
+
+       .laptop-image{
+    width: 100% !important;
+    
+}
+       .contactUs-third-row{
+    background-color:  #E7F9FD !important;
+    width: 100%;
+    
+    margin: 0px ;
+    box-shadow: 1px 4px 2px rgba(0, 54, 75, 0.15), 1px 4px 10px rgba(19, 125, 171, 0.25) !important;
+    border-radius: 4px !important;
+}
+    }

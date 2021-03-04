@@ -12,6 +12,7 @@ export default function Home() {
         <title>Afrobarometer</title>
       </Head>
       <Header />
+
       <div className="home--header ">
         <div className="container">
           <div className="row mx-0">
@@ -223,6 +224,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
       <div className="research-second-header ">
         <div className="row mx-0">
           <div className="col-md-7 col-12">
@@ -241,7 +243,7 @@ export default function Home() {
               <div className="Research-second-author  padding-top">
                 SHARE RESEARCH
               </div>
-              <div className="blue-icons">
+              <div className="blue-icons-style">
                 <img src="./images/facebook-blue.png" alt="facebook-icon" />
                 <img
                   src="./images/instagram-blue.png"
@@ -260,6 +262,7 @@ export default function Home() {
             />
           </div>
         </div>
+
         <Footer />
       </div>
     </>

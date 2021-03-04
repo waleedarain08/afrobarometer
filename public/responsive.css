@@ -1,8 +1,9 @@
+/* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
-    .container {
+    /* .container {
         width: 100%;
         padding: 0px;
-    }
+    } */
 
     /*--------- navbar Start ----------*/
     .main-nav {
@@ -82,7 +83,8 @@
     }
 
     /*---- Second content part start ---*/
-    
+    .background-vector .home-second-header {
+    }
 
     .background-vector .home-second-header .main-div {
         padding: 30px 2px 30px !important;
@@ -119,7 +121,7 @@
         padding: 40px 12px;
     }
     .home-third-image .laptop-image {
-        width: 100%;
+        width: 100% !important;
     }
     /*---- Third content part end ---*/
 
@@ -226,8 +228,7 @@
         padding: 30px 25px;
     }
 
-    .footer .footer-logo {
-    }
+
 
     .footer .footer-logo .footer-logo-img {
         margin: 0px;
@@ -249,8 +250,6 @@
         display: flex;
     }
 
-    .col-md-8.pr-0 {
-    }
 
     .footer .footer-privacy .privacypolicy {
         padding: 0px;
@@ -266,17 +265,51 @@
         font-size: 14.5px;
         padding: 0px;
     }
+    .partners-logo{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 25px;
+        flex-wrap: wrap;
+        min-width: 100%;
+        text-align: center;
+    }
+    .rawData-third-portion{
+        margin-top:80%;
+    }
+    .home-image{
+        margin-top:38%;
+    }
+    .laptop-image{
+        width:400px !important;
+        height:400px !important
+    }
     /*---- Footer end ---*/
 }
 
+
+    @media only screen and (device-width: 768px) {
+       /* default iPad screens */
+    }
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+    
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+    #navbarNavDropdown{
+        display: flex !important;
+       justify-content: center !important;
+    }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+}
+
+
+.collapse .navbar-collapse{
+display: flex !important;
+justify-content: center !important;
 }

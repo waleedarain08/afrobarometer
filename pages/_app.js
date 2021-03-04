@@ -12,14 +12,14 @@ export default function MyApp({ Component, pageProps }) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
         />
-        <link rel="stylesheet" href="style.css" />
-        <link rel="stylesheet" href="footer.css" />
-        <link rel="stylesheet" href="responsive.css" />
         <link rel="stylesheet" href="AboutUs.css" />
         <link rel="stylesheet" href="ContactUs.css" />
         <link rel="stylesheet" href="RawData.css" />
         <link rel="stylesheet" href="Research.css" />
         <link rel="stylesheet" href="ReseacrhTopic.css" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="footer.css" />
+        <link rel="stylesheet" href="responsive.css" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
           rel="stylesheet"

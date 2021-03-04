@@ -6,6 +6,7 @@
 }
 .aboutUs-content{
     text-align: center;
+    font-family: Lato;
     font-style: normal;
     font-weight: 900;
     font-size: 56px;
@@ -14,12 +15,14 @@
     padding-top: 118px;
 }
 .aboutUs-second-row{
-    margin-top: 103px;
+    margin-top: 103px;margin-left: 3%;
+    margin-right: 3%;
 }
 .aboutUs-second-content{
     text-align: left;
 }
 .aboutUs-subheading{  
+    font-family: Lato;
     font-style: normal;
     font-weight: 800;
     font-size: 36px;
@@ -30,6 +33,7 @@
     padding-left: 90px;
 }
 .aboutUs-subheading-content{
+    font-family: Lato;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -41,7 +45,7 @@
 .photo{
     text-align: center;
 }
-.laptop-image{
+.about-laptop-image{
     width: 95%;
     height: 352px;
     filter: drop-shadow(2px 4px 8px rgba(0, 38, 40, 0.15));
@@ -49,10 +53,11 @@
     padding-top: 49px;
 }
 .aboutUs-third-row{
-    margin-top: 200px;
+    margin-top: 100px;
     padding: 0px 85px;
 }
 .aboutUs-our_partners{
+    font-family: Lato;
     font-style: normal;
     font-weight: 900;
     font-size: 36px;

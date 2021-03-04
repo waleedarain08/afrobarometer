@@ -12,87 +12,90 @@ export default function RawData() {
         <title>Raw Data</title>
       </Head>
       <Header />
-
       <div className="rawData_header">
-        <div className="row mx-0">
-          <div className="col-md-6">
-            <div className="rawData-content">
-              <div className="rawData-heading">Raw Data</div>
-              <div className="rawData-paragraph">
-                Afrobarometer is a data-collection company dedicated to Africa.{" "}
-                <br />
-                The company enables the collection and the delivery of
-                on-demand, <br />
-                real-time, cost-effective, and reliable Africa consumer data and
-                insights.
-              </div>
-              <div className="rawData-button-div">
-                <button className="rawData-button">Learn More</button>
+        <div className="container">
+          <div className="row mx-0">
+            <div className="col-md-7 col-12">
+              <div className="rawData-content">
+                <div className="rawData-heading">Afrobarometer</div>
+                <div className="rawData-paragraph">
+                  Afrobarometer is a data-collection company dedicated to
+                  Africa. The company enables the collection and the delivery of
+                  on-demand, real-time, cost-effective, and reliable Africa
+                  consumer data and insights.
+                </div>
+                <div className="home---button-div">
+                  <button className="home---button">Download</button>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="col-md-6 image-raw">
-            <img
-              src="./images/rawdata-header.png"
-              alt="raw data"
-              className="rawdata-img"
-            />
+            <div className="col-md-5 home-photo col-12">
+              <img
+                src="./images/rawdata-header.png"
+                alt="photo"
+                className="home-image"
+              />
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="rawData-second-portion">Raw Data</div>
+      <div className="container">
+        <div className="rawData-second-portion">Raw Data</div>
+      </div>
 
       <div className="rawData-third-portion">
         <div className="row mx-0">
           <div className="col-md-5 left-rawdata-div">
-            <div className="row mx-0">
-              <div className="search-input">
-                <img
-                  src="./images/search icon.png"
-                  alt=""
-                  className="search-icon"
-                />
-                <input
-                  placeholder="Search by name"
-                  className="input-field-searchbyname"
-                />
+            <div className="container">
+              <div className="row mx-0">
+                <div className="search-input">
+                  <img
+                    src="./images/search icon.png"
+                    alt=""
+                    className="search-icon"
+                  />
+                  <input
+                    placeholder="Search by name"
+                    className="input-field-searchbyname"
+                  />
+                </div>
+                <div className="show-all-div">
+                  <span className="checkbox-icon">
+                    <img src="./images/Path.png" alt="" />
+                  </span>
+                  <span className="show">Show All</span>
+                </div>
               </div>
-              <div className="show-all-div">
-                <span className="checkbox-icon">
-                  <img src="./images/Path.png" alt="" />
-                </span>
-                <span className="show">Show All</span>
+              <div className="row mx-0">
+                <span className="text-button">Popular</span>
               </div>
-            </div>
-            <div className="row mx-0">
-              <span className="text-button">Popular</span>
-            </div>
-            <div>
-              <button className="non-selected-btn rawdata-buttons">
-                Democracy
-              </button>
-              <button className="selected-btn rawdata-buttons">Democracy</button>
-              <button className="selected-btn rawdata-buttons">
-                External Affairs & Security
-              </button>
-              <button className="non-selected-btn rawdata-buttons">
-                Democracy
-              </button>
-              <button className="non-selected-btn rawdata-buttons">
-                Democracy
-              </button>
-            </div>
-            <div className="row mx-0">
-              <span className="text-button">Category Name</span>
-            </div>
-            <div>
-              <button className="non-selected-btn rawdata-buttons">
-                Democracy
-              </button>
-              <button className="non-selected-btn rawdata-buttons">
-                Democracy
-              </button>
+              <div>
+                <button className="non-selected-btn rawdata-buttons">
+                  Democracy
+                </button>
+                <button className="selected-btn rawdata-buttons">Democracy</button>
+                <button className="selected-btn rawdata-buttons">
+                  External Affairs & Security
+                </button>
+                <button className="non-selected-btn rawdata-buttons">
+                  Democracy
+                </button>
+                <button className="non-selected-btn rawdata-buttons">
+                  Democracy
+                </button>
+              </div>
+              <div className="row mx-0">
+                <span className="text-button">Category Name</span>
+              </div>
+              <div>
+                <button className="non-selected-btn rawdata-buttons">
+                  Democracy
+                </button>
+                <button className="non-selected-btn rawdata-buttons">
+                  Democracy
+                </button>
+              </div>
             </div>
           </div>
           <div className="col-md-7">
@@ -103,6 +106,7 @@ export default function RawData() {
                     <img
                       src="./images/Rectangle 270.png"
                       alt="insight number 01"
+                      className="raw-data-pic"
                     />
                   </div>
                   <div className="container">
@@ -135,6 +139,7 @@ export default function RawData() {
                     <img
                       src="./images/Rectangle 270.png"
                       alt="insight number 01"
+                      className="raw-data-pic"
                     />
                   </div>
                   <div className="container">
@@ -169,6 +174,7 @@ export default function RawData() {
                     <img
                       src="./images/Rectangle 270.png"
                       alt="insight number 01"
+                      className="raw-data-pic"
                     />
                   </div>
                   <div className="container">
@@ -201,6 +207,7 @@ export default function RawData() {
                     <img
                       src="./images/Rectangle 270.png"
                       alt="insight number 01"
+                      className="raw-data-pic"
                     />
                   </div>
                   <div className="container">
@@ -228,10 +235,13 @@ export default function RawData() {
                 </div>
               </div>
             </div>
+
+            <div className="rawdata-research-button">
+              <button className="transparent-button">back to overview</button>
+            </div>
           </div>
         </div>
       </div>
-      <div style={{height:"130px"}}></div>
       <Footer />
     </>
   );

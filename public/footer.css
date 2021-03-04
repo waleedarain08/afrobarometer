@@ -1,7 +1,7 @@
 .footer{
     height: 290px;
     background: #042E40;
-    margin-top: 300px;
+    margin-top: 50px;
 }
 .footer-logo{
     text-align: center;
@@ -27,7 +27,7 @@
 }
 .privacypolicy{
    padding-left: 0px !important;
-    text-align: left;
+    text-align: center;
 }
 a:focus{
     border-bottom: 1px solid;
@@ -57,6 +57,12 @@ a:hover  {
     display: flex;
     justify-content: space-between;
 }
+
+.right-main-nav{
+    display: flex;
+    
+}
+
 .nav-01{
     height: 104px !important;
 }
@@ -96,4 +102,36 @@ border-radius: 8px;
 }
 .main-nav-input{
     margin-top: 10px;
+}
+
+.collapse .navbar-collapse{
+display: flex !important;
+justify-content: center !important;
+}
+/* 
+transparent-button */
+
+.transparent-button{
+border: 1px solid #137DAB;
+box-sizing: border-box;
+border-radius: 8px;
+font-family: Lato;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 22px;
+padding: 13px 14px;
+text-align: center;
+text-transform: uppercase;
+color: #137DAB;
+background-color: #fff;
+}
+
+button:focus {
+  
+    outline: 2px auto #137DAB !important;
+}
+
+a:active{
+    border-bottom: 2px solid #fff;
 }
