@@ -5,11 +5,11 @@
   height: 490px;
   /* height: 533px;  */
 }
-.background-vector {
-  /* background: url(./images/homevector.png);
+/* .background-vector {
+  background: url(./images/homevector.png);
       background-size: cover;
-    width: 100%; */
-}
+    width: 100%; 
+} */
 .main-div {
   padding: 200px 88px 0px;
 }
@@ -126,9 +126,9 @@
   color: #004549;
 }
 
-.home-fourth-header {
-  /* margin-top: 200px; */
-}
+/* .home-fourth-header {
+  margin-top: 200px; 
+} */
 .solution-image {
   width: 440px;
   height: 344px;
@@ -139,8 +139,8 @@
   border-radius: 4px;
 }
 
-.home-third-image {
-}
+/* .home-third-image {
+} */
 
 .home-fifth-row {
   margin: auto;
