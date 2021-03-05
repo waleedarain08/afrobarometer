@@ -236,7 +236,7 @@ export default function RawData() {
               </div>
             </div>
 
-            <div className="rawdata-research-button">
+            <div className="research-button">
               <button className="transparent-button">back to overview</button>
             </div>
           </div>

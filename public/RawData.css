@@ -13,7 +13,7 @@
     font-family: Lato;
     font-style: normal;
     font-weight: 800;
-    font-size: 56px;
+    font-size: 48px;
     line-height: 67px;
     color: #002628;
  }
@@ -217,7 +217,7 @@ color: #004549;
 margin-left: 10px;
 }
 
-.rawdata-research-button{
+.research-button{
    margin: 100px 0px;
    display: flex;
    justify-content: center;
