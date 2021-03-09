@@ -133,7 +133,10 @@ border-radius: 4px;
    color: #fff;
    border: 1px solid #137DAB;
 }
-
+.contact-error{
+    color:red;
+    font-size: 14px;
+}
 
 @media (max-width: 576px) {
     .card {

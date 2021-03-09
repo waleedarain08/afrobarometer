@@ -1,8 +1,28 @@
 import Head from "next/head";
+import React, { useEffect, useState } from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { BaseUrl } from "../public/constant";
 
-export default function RawData() {
+export default function RawData({data}) {
+
+
+  // const [rawData,setRawData] = useState([
+  //   {id:1,title:"hello",description:"lorem ispum",date:"2020/03.05",graph:"abc.jpg"}
+  // ]);
+  
+  // const callApi = async () => {
+  //   fetch(`${BaseUrl}/public/api/raw-data`, {
+  //     method: "GET",
+  //     headers: {
+  //       Accept: "application/json",
+  //       "Content-Type": "application/json",
+  //     },
+  //   })
+  //   .then((response) => setRawData(response.json()))
+  //   .catch((e) => e);
+  // };
+
   return (
     <>
       <Head>
@@ -74,7 +94,9 @@ export default function RawData() {
                 <button className="non-selected-btn rawdata-buttons">
                   Democracy
                 </button>
-                <button className="selected-btn rawdata-buttons">Democracy</button>
+                <button className="selected-btn rawdata-buttons">
+                  Democracy
+                </button>
                 <button className="selected-btn rawdata-buttons">
                   External Affairs & Security
                 </button>
@@ -100,7 +122,9 @@ export default function RawData() {
           </div>
           <div className="col-md-7">
             <div className="row mx-0">
-              <div className="col-md-6">
+            {data.map((item,index)=>{
+            return (
+              <div key={index} className="col-md-6">
                 <div className="insight">
                   <div className="insight-image">
                     <img
@@ -110,7 +134,7 @@ export default function RawData() {
                     />
                   </div>
                   <div className="container">
-                    <p className="insight-heading">Insight 1</p>
+                    <p className="insight-heading">{item.title}</p>
                     <p className="insight-research-date">
                       Date of research: 1/23/2021
                     </p>
@@ -133,41 +157,9 @@ export default function RawData() {
                   </div>
                 </div>
               </div>
-              <div className="col-md-6">
-                <div className="insight">
-                  <div className="insight-image">
-                    <img
-                      src="./images/Rectangle 270.png"
-                      alt="insight number 01"
-                      className="raw-data-pic"
-                    />
-                  </div>
-                  <div className="container">
-                    <p className="insight-heading">Insight 1</p>
-                    <p className="insight-research-date">
-                      Date of research: 1/23/2021
-                    </p>
-                    <p className="insight-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    </p>
-                    <br />
-                    <div className="insight-footer">
-                      <p className="insight-share">SHARE insight:</p>
-                      <div className="insight-icons">
-                        <img src="./images/Facebook.png" alt="facebook" />
-                        <img
-                          src="./images/Instagram.png"
-                          alt="Instagram"
-                          className="insta-icon"
-                        />
-                        <img src="./images/Twitter.png" alt="twitter" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            )})};
             </div>
-            <div className="row mx-0 insight-cards-second-row">
+            {/* <div className="row mx-0 insight-cards-second-row">
               <div className="col-md-6">
                 <div className="insight">
                   <div className="insight-image">
@@ -234,7 +226,7 @@ export default function RawData() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className="research-button">
               <button className="transparent-button">back to overview</button>
@@ -246,3 +238,14 @@ export default function RawData() {
     </>
   );
 }
+
+export async function getStaticProps() {
+  const res = await fetch(`${BaseUrl}/raw-data`)
+  const data = await res.json()
+  return {
+    props: {
+      data,
+    },
+  }
+}
+

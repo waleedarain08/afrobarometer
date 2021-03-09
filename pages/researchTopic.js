@@ -115,9 +115,10 @@ export default function AboutUs() {
                         <div className="form-group col-md-12 no-padding">
                           <input
                             type="checkbox"
-                            id="abc"
-                            name="abc"
-                            value="abc"
+                            id="privacy"
+                            name="privacy"
+                            value="privacy"
+                            defaultChecked
                           />
                           <label htmlFor="abc" style={{marginLeft:"5px"}}>
                             I have read and accepted the Privacy Policy*
@@ -128,9 +129,9 @@ export default function AboutUs() {
                         <div className="form-group col-md-12 no-padding">
                           <input
                             type="checkbox"
-                            id="abc"
-                            name="abc"
-                            value="abc"
+                            id="updates"
+                            name="updates"
+                            value="updated"
                           />
                           <label htmlFor="abc" style={{marginLeft:"5px"}}>
                             I would like to receive news, updates and thought

@@ -2,8 +2,10 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import { BaseUrl } from "../public/constant";
 
-export default function Research() {
+
+export default function Research({ data }) {
   return (
     <>
       <Head>
@@ -33,109 +35,134 @@ export default function Research() {
           </div>
         </div>
       </div>
-
-      <div className="research-research-second-header ">
-        <div className="container">
-          <div className="row mx-0">
-            <div className="col-md-7">
-              <div className="research-second-content">
-                <div className="research-rawdata-heading">
-                  What Europeans Want from the European Union
-                </div>
-                <div className="Research-second-author">
-                  Research by: Author Name
-                </div>
-                <div className="research--second-button-div">
-                  <Link href="/researchTopic">
-                    <button className="research--second-button">
-                      GET RESEARCH
-                    </button>
-                  </Link>
-                </div>
-                <div className="web-disabled">
-                  <br />
-                  <img src="./images/facebook-blue.png" alt="facebook-icon" />
-                  <img
-                    src="./images/instagram-blue.png"
-                    alt="instagram-icon"
-                    className="insta-research"
-                  />
-                  <img src="./images/twitter-blue.png" alt="twitter-icon" />
-                </div>
-              </div>
-            </div>
-            <div className="col-md-5 research-icons">
-              <div className="photo-01">
-                <div className="gradient-content">February 2021</div>
-              </div>
-              <div className="blue-icons">
-                <img src="./images/facebook-blue.png" alt="facebook-icon" />{" "}
-                <br />
-                <br />
-                <img
-                  src="./images/instagram-blue.png"
-                  alt="instagram-icon"
-                />{" "}
-                <br />
-                <br />
-                <img src="./images/twitter-blue.png" alt="twitter-icon" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="research-third-header">
-        <div className="container">
-          <div className="row mx-0">
-            <div className="col-md-5 research-icons">
-              <div className="blue-icons-right">
-                <img src="./images/facebook-blue.png" alt="facebook-icon" />{" "}
-                <br />
-                <br />
-                <img
-                  src="./images/instagram-blue.png"
-                  alt="instagram-icon"
-                />{" "}
-                <br />
-                <br />
-                <img src="./images/twitter-blue.png" alt="twitter-icon" />
-              </div>
-              <div className="photo-02">
-                <div className="gradient-content">February 2021</div>
-              </div>
-            </div>
-            <div className="col-md-7">
-              <div className="research-second-content right-box-padding">
-                <div className="research-rawdata-heading">
-                  What Europeans Want from the European Union
-                </div>
-                <div className="Research-second-author">
-                  Research by: Author Name
-                </div>
-                <div className="research--second-button-div">
-                  <Link href="/researchTopic">
-                    <button className="research--second-button">
-                      GET RESEARCH
-                    </button>
-                  </Link>
-                </div>
-                <div className="web-disabled">
-                  <br />
-                  <img src="./images/facebook-blue.png" alt="facebook-icon" />
-                  <img
-                    src="./images/instagram-blue.png"
-                    alt="instagram-icon"
-                    className="insta-research"
-                  />
-                  <img src="./images/twitter-blue.png" alt="twitter-icon" />
+      {data.map((item, index) => {
+        if (index % 2 === 0) {
+          return (
+            <div className="research-research-second-header ">
+              <div className="container">
+                <div className="row mx-0">
+                  <div className="col-md-7">
+                    <div className="research-second-content">
+                      <div className="research-rawdata-heading">
+                        {item.title}
+                      </div>
+                      <div className="Research-second-author">
+                        Research by: Author Name
+                      </div>
+                      <div className="research--second-button-div">
+                        <Link href="/researchTopic">
+                          <button className="research--second-button">
+                            GET RESEARCH
+                          </button>
+                        </Link>
+                      </div>
+                      <div className="web-disabled">
+                        <br />
+                        <img
+                          src="./images/facebook-blue.png"
+                          alt="facebook-icon"
+                        />
+                        <img
+                          src="./images/instagram-blue.png"
+                          alt="instagram-icon"
+                          className="insta-research"
+                        />
+                        <img
+                          src="./images/twitter-blue.png"
+                          alt="twitter-icon"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-md-5 research-icons">
+                    <div className="photo-01">
+                      <div className="gradient-content">February 2021</div>
+                    </div>
+                    <div className="blue-icons">
+                      <img
+                        src="./images/facebook-blue.png"
+                        alt="facebook-icon"
+                      />{" "}
+                      <br />
+                      <br />
+                      <img
+                        src="./images/instagram-blue.png"
+                        alt="instagram-icon"
+                      />{" "}
+                      <br />
+                      <br />
+                      <img src="./images/twitter-blue.png" alt="twitter-icon" />
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <div className="research-fourth-header">
+          );
+        } else {
+          return (
+            <div className="research-third-header">
+              <div className="container">
+                <div className="row mx-0">
+                  <div className="col-md-5 research-icons">
+                    <div className="blue-icons-right">
+                      <img
+                        src="./images/facebook-blue.png"
+                        alt="facebook-icon"
+                      />{" "}
+                      <br />
+                      <br />
+                      <img
+                        src="./images/instagram-blue.png"
+                        alt="instagram-icon"
+                      />{" "}
+                      <br />
+                      <br />
+                      <img src="./images/twitter-blue.png" alt="twitter-icon" />
+                    </div>
+                    <div className="photo-02">
+                      <div className="gradient-content">February 2021</div>
+                    </div>
+                  </div>
+                  <div className="col-md-7">
+                    <div className="research-second-content right-box-padding">
+                      <div className="research-rawdata-heading">
+                        {item.title}
+                      </div>
+                      <div className="Research-second-author">
+                        Research by: Author Name
+                      </div>
+                      <div className="research--second-button-div">
+                        <Link href="/researchTopic">
+                          <button className="research--second-button">
+                            GET RESEARCH
+                          </button>
+                        </Link>
+                      </div>
+                      <div className="web-disabled">
+                        <br />
+                        <img
+                          src="./images/facebook-blue.png"
+                          alt="facebook-icon"
+                        />
+                        <img
+                          src="./images/instagram-blue.png"
+                          alt="instagram-icon"
+                          className="insta-research"
+                        />
+                        <img
+                          src="./images/twitter-blue.png"
+                          alt="twitter-icon"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          );
+        }
+      })}
+      {/* <div className="research-fourth-header">
         <div className="container">
           <div className="row mx-0">
             <div className="col-md-7">
@@ -184,9 +211,19 @@ export default function Research() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <Footer />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const res = await fetch(`${BaseUrl}`);
+  const data = await res.json();
+  return {
+    props: {
+      data,
+    },
+  };
 }
