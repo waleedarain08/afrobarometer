@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Head from "next/head";
 import Link from "next/link";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import { validateAll } from "indicative/validator";
-import {BaseUrl} from "../public/constant";
+import { BaseUrl } from "../public/constant";
+
 
 export default function ContactUs() {
   const [name, setName] = useState("");
@@ -14,7 +15,6 @@ export default function ContactUs() {
   const [SignUpErrors, setSignUpErrors] = useState({});
   const [isLoading, setLoading] = useState(false);
 
-  
   const handleSignUp = async (event) => {
     event.preventDefault();
     const rules = {
@@ -49,20 +49,22 @@ export default function ContactUs() {
 
   const callApi = async () => {
     setSignUpErrors({});
-    setLoading(true);
-    const res = await fetch(`${BaseUrl}/public/api/query`, {
-      body: JSON.stringify({
-        name: name,
-        email: email,
-        company : company,
-        message : message
-      }),
-      headers: {
-        "Content-Type": "application/json",
+    //setLoading(true);
+    const data = new FormData();
+    data.append("name", name);
+    data.append("company", company);
+    data.append("message", message);
+    data.append("email", email);
+
+    const res = await fetch(`${BaseUrl}/query`, {
+      headers:{
+        //"Content-Type":"multipart/form-data"
       },
+      body: data,
       method: "POST",
-    });
-    const result = await res.json();
+    })
+      .then((response) => response.json())
+      .then((jsondata) => alert(jsondata.success));
   };
 
   return (
@@ -135,11 +137,18 @@ export default function ContactUs() {
                             type="text"
                             id="name"
                             required
-                            onChange={setName}
-                            style={SignUpErrors.name?{borderColor: "red" }:{borderColor:"#ced4da"}}
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                            style={
+                              SignUpErrors.name
+                                ? { borderColor: "red" }
+                                : { borderColor: "#ced4da" }
+                            }
                             className="form-control form-control-lg"
                           />
-                          <span className="contact-error">{SignUpErrors ? SignUpErrors.name : null}</span>
+                          <span className="contact-error">
+                            {SignUpErrors ? SignUpErrors.name : null}
+                          </span>
                         </div>
                       </div>
                       <div className="col-md-6 no-padding">
@@ -148,11 +157,17 @@ export default function ContactUs() {
                           <input
                             type="text"
                             id="company"
-                            onChange={setCompany}
-                            style={SignUpErrors.company?{borderColor: "red" }:{borderColor:"#ced4da"}}
+                            value={company}
+                            onChange={e => setCompany(e.target.value)}                            style={
+                              SignUpErrors.company
+                                ? { borderColor: "red" }
+                                : { borderColor: "#ced4da" }
+                            }
                             className="form-control form-control-lg"
                           />
-                          <span className="contact-error">{SignUpErrors ? SignUpErrors.company : null}</span>
+                          <span className="contact-error">
+                            {SignUpErrors ? SignUpErrors.company : null}
+                          </span>
                         </div>
                       </div>
                     </div>
@@ -163,11 +178,18 @@ export default function ContactUs() {
                           type="email"
                           id="email"
                           required
-                          onChange={setEmail}
-                          style={SignUpErrors.email?{borderColor: "red" }:{borderColor:"#ced4da"}}
+                          value={email}
+                          onChange={e => setEmail(e.target.value)}                         
+                           style={
+                            SignUpErrors.email
+                              ? { borderColor: "red" }
+                              : { borderColor: "#ced4da" }
+                          }
                           className="form-control form-control-lg"
                         />
-                      <span className="contact-error">{SignUpErrors ? SignUpErrors.email : null}</span>
+                        <span className="contact-error">
+                          {SignUpErrors ? SignUpErrors.email : null}
+                        </span>
                       </div>
                     </div>
                     <div className="row mx-0">
@@ -178,12 +200,18 @@ export default function ContactUs() {
                           type="text"
                           id="message"
                           required
-                          style={SignUpErrors.message?{borderColor: "red" }:{borderColor:"#ced4da"}}
-                          onChange={setMessage}
-                          className="textarea"
+                          style={
+                            SignUpErrors.message
+                              ? { borderColor: "red" }
+                              : { borderColor: "#ced4da" }
+                          }
+                          value={message}
+                          onChange={e => setMessage(e.target.value)}                          className="textarea"
                           rows="4"
                         ></textarea>
-                        <span className="contact-error">{SignUpErrors ? SignUpErrors.message : null}</span>
+                        <span className="contact-error">
+                          {SignUpErrors ? SignUpErrors.message : null}
+                        </span>
                       </div>
                     </div>
                     <div className="home---button-div">

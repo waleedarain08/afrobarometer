@@ -2,7 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import { BaseUrl } from "../public/constant";
+import { BaseUrl,ImageUrl } from "../public/constant";
 
 
 export default function Research({ data }) {
@@ -38,7 +38,7 @@ export default function Research({ data }) {
       {data.map((item, index) => {
         if (index % 2 === 0) {
           return (
-            <div className="research-research-second-header ">
+            <div key={index} className="research-research-second-header ">
               <div className="container">
                 <div className="row mx-0">
                   <div className="col-md-7">
@@ -47,7 +47,7 @@ export default function Research({ data }) {
                         {item.title}
                       </div>
                       <div className="Research-second-author">
-                        Research by: Author Name
+                        Research by : {item.author}
                       </div>
                       <div className="research--second-button-div">
                         <Link href="/researchTopic">
@@ -100,7 +100,7 @@ export default function Research({ data }) {
           );
         } else {
           return (
-            <div className="research-third-header">
+            <div  key={index} className="research-third-header">
               <div className="container">
                 <div className="row mx-0">
                   <div className="col-md-5 research-icons">
@@ -129,7 +129,7 @@ export default function Research({ data }) {
                         {item.title}
                       </div>
                       <div className="Research-second-author">
-                        Research by: Author Name
+                        Research by: {item.author}
                       </div>
                       <div className="research--second-button-div">
                         <Link href="/researchTopic">
@@ -219,11 +219,13 @@ export default function Research({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${BaseUrl}/research`);
-  const data = await res.json();
+  const res = await fetch(`${BaseUrl}/research`)
+  .then(response => response.json())
+  .then(jsondata =>  jsondata  )
+  const data = await res.research;
   return {
     props: {
       data,
     },
-  };
+  }
 }

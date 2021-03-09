@@ -2,11 +2,16 @@ import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import { BaseUrl } from "../public/constant";
+import { BaseUrl,ImageUrl} from "../public/constant";
 
 export default function RawData({data}) {
 
 
+  // useEffect( async()=>{
+  //   fetch(`${BaseUrl}/raw-data`)
+  //   .then(response => response.json())
+  //   .then(jsondata => console.log(jsondata))
+  // });
   // const [rawData,setRawData] = useState([
   //   {id:1,title:"hello",description:"lorem ispum",date:"2020/03.05",graph:"abc.jpg"}
   // ]);
@@ -128,7 +133,7 @@ export default function RawData({data}) {
                 <div className="insight">
                   <div className="insight-image">
                     <img
-                      src="./images/Rectangle 270.png"
+                      src={`${ImageUrl}/${item.graph}`}
                       alt="insight number 01"
                       className="raw-data-pic"
                     />
@@ -136,10 +141,10 @@ export default function RawData({data}) {
                   <div className="container">
                     <p className="insight-heading">{item.title}</p>
                     <p className="insight-research-date">
-                      Date of research: 1/23/2021
+                      Date of research: {item.date}
                     </p>
                     <p className="insight-text">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                      {item.description}
                     </p>
                     <br />
                     <div className="insight-footer">
@@ -241,7 +246,9 @@ export default function RawData({data}) {
 
 export async function getStaticProps() {
   const res = await fetch(`${BaseUrl}/raw-data`)
-  const data = await res.json()
+  .then(response => response.json())
+  .then(jsondata =>  jsondata  )
+  const data = await res.raw_data;
   return {
     props: {
       data,
