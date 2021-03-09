@@ -162,7 +162,7 @@ export default function RawData({data}) {
                   </div>
                 </div>
               </div>
-            )})};
+            )})}
             </div>
             {/* <div className="row mx-0 insight-cards-second-row">
               <div className="col-md-6">
