@@ -219,7 +219,7 @@ export default function Research({ data }) {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${BaseUrl}`);
+  const res = await fetch(`${BaseUrl}/research`);
   const data = await res.json();
   return {
     props: {
