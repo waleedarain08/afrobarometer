@@ -4,6 +4,21 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 
 export default function Home() {
+  function fbShare(url, title, descr, image, winWidth, winHeight) {
+    // var winTop = (screen.height / 2) - (winHeight / 2);
+    //var winLeft = (screen.width / 2) - (winWidth / 2);
+    window.open(
+      "http://www.facebook.com/sharer.php?s=100&p[title]=" +
+        title +
+        "&p[summary]=" +
+        descr +
+        "&p[url]=" +
+        url +
+        "&p[images][0]=" +
+        image,
+      "sharer"
+    );
+  }
   return (
     <>
       <Head>
@@ -213,7 +228,7 @@ export default function Home() {
             <img src="./images/homechart5.png" alt="raw data graph" />
           </div>
         </div>
-        <div style={{display:"flex",justifyContent:"center"}}>
+        <div style={{ display: "flex", justifyContent: "center" }}>
           <Link href="/rawdata">
             <button className="research--second-button">VIEW ALL</button>
           </Link>
@@ -252,7 +267,10 @@ export default function Home() {
                 SHARE RESEARCH
               </div>
               <div className="blue-icons-style">
-                <a href="https://www.facebook.com">
+                <a
+                  href="https://facebook.com/sharer.php?display=page&u=https://afrobarometer.vercel.app/"
+                  target="_blank"
+                >
                   <img src="./images/facebook-blue.png" alt="facebook-icon" />
                 </a>
                 <a href="https://www.instagram.com">
