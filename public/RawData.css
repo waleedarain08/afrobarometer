@@ -178,6 +178,8 @@ input:focus{
     border: 2px solid #8A979C;
     color: #8A979C;
     text-transform: uppercase;
+    margin-left:6px;
+    margin-right:6px;
 }
 
 .left-rawdata-div{
