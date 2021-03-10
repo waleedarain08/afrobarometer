@@ -120,7 +120,7 @@ export default function AboutUs() {
                             value="privacy"
                             defaultChecked
                           />
-                          <label htmlFor="abc" style={{marginLeft:"5px"}}>
+                          <label htmlFor="privacy" style={{marginLeft:"5px"}}>
                             I have read and accepted the Privacy Policy*
                           </label>
                         </div>
@@ -133,7 +133,7 @@ export default function AboutUs() {
                             name="updates"
                             value="updated"
                           />
-                          <label htmlFor="abc" style={{marginLeft:"5px"}}>
+                          <label htmlFor="updates" style={{marginLeft:"5px"}}>
                             I would like to receive news, updates and thought
                             leadership once in a while
                           </label>
