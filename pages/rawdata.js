@@ -56,6 +56,7 @@ export default function RawData({data}) {
               </div>
             </div>
             <div className="col-md-5 home-photo col-12">
+              
               <img
                 src="./images/rawdata-header.png"
                 alt="photo"
