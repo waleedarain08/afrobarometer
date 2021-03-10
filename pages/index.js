@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import Header from "../components/header";
 import Footer from "../components/footer";
 
@@ -212,6 +213,11 @@ export default function Home() {
             <img src="./images/homechart5.png" alt="raw data graph" />
           </div>
         </div>
+        <div style={{display:"flex",justifyContent:"center"}}>
+          <Link href="/rawdata">
+            <button className="research--second-button">VIEW ALL</button>
+          </Link>
+        </div>
       </div>
 
       <div className="main-div">
@@ -236,21 +242,29 @@ export default function Home() {
                 Research by: Author Name
               </div>
               <div className="research--second-button-div">
-                <button className="research--second-button">
-                  GET RESEARCH
-                </button>
+                <Link href="/research">
+                  <button className="research--second-button">
+                    ALL RESEARCHES
+                  </button>
+                </Link>
               </div>
               <div className="Research-second-author  padding-top">
                 SHARE RESEARCH
               </div>
               <div className="blue-icons-style">
-                <img src="./images/facebook-blue.png" alt="facebook-icon" />
-                <img
-                  src="./images/instagram-blue.png"
-                  alt="instagram-icon"
-                  className="instagram-icon"
-                />
-                <img src="./images/twitter-blue.png" alt="twitter-icon" />
+                <a href="https://www.facebook.com">
+                  <img src="./images/facebook-blue.png" alt="facebook-icon" />
+                </a>
+                <a href="https://www.instagram.com">
+                  <img
+                    src="./images/instagram-blue.png"
+                    alt="instagram-icon"
+                    className="instagram-icon"
+                  />
+                </a>
+                <a href="https://www.twitter.com">
+                  <img src="./images/twitter-blue.png" alt="twitter-icon" />
+                </a>
               </div>
             </div>
           </div>

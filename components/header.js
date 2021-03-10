@@ -8,11 +8,13 @@ const Header = () => {
         <div className="main-nav row mx-0">
           <div className="col-md-6 col-12">
             <div className="main--logo">
-              <img
-                src="/images/logo.png"
-                alt="Afri Sight"
-                className="main-nav-logo"
-              />
+              <Link href="/">
+                <img
+                  src="/images/logo.png"
+                  alt="Afri Sight"
+                  className="main-nav-logo"
+                />
+              </Link>
             </div>
           </div>
 
@@ -36,7 +38,14 @@ const Header = () => {
         </div>
       </nav>
       <nav className="navbar navbar-expand-lg navbar-light home-navbar">
-        <a className="navbar-brand" href="#"></a>
+        <Link href="/">
+          <img
+            style={{display:"none"}}
+            src="/images/logo.png"
+            alt="Afri Sight"
+            className="main-nav-logo-mobile"
+          />
+        </Link>
         <button
           className="navbar-toggler"
           type="button"

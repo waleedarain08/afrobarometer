@@ -34,7 +34,7 @@ export default function RawData({data}) {
         <title>Afrobarometer</title>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
         <title>Raw Data</title>
       </Head>
       <Header />

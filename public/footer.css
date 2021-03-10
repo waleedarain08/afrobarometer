@@ -135,3 +135,9 @@ button:focus {
 a:active{
     border-bottom: 2px solid #fff;
 }
+
+.navbar-toggler-icon {
+    background-image: url("https://ebace.aero/wp-content/themes/EBACE2016/assets/hamburger.png") !important;
+      width: 50px !important;
+      height: 50px !important;
+  }
