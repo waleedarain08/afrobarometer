@@ -280,7 +280,15 @@ export default function Home() {
                     className="instagram-icon"
                   />
                 </a>
-                <a href="https://www.twitter.com">
+                <a
+                  href="https://twitter.com/intent/tweet"
+                  target="_blank"
+                  data-size="large"
+                  data-text="Afrisight"
+                  data-url="https://afrobarometer.vercel.app/"
+                  data-hashtags="example,demo"
+                  data-via="twitterdev"
+                >
                   <img src="./images/twitter-blue.png" alt="twitter-icon" />
                 </a>
               </div>
