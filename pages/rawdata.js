@@ -176,13 +176,36 @@ export default function RawData({ data }) {
                         <div className="insight-footer">
                           <p className="insight-share">SHARE insight:</p>
                           <div className="insight-icons">
-                            <img src="./images/Facebook.png" alt="facebook" />
-                            <img
-                              src="./images/Instagram.png"
-                              alt="Instagram"
-                              className="insta-icon"
-                            />
-                            <img src="./images/Twitter.png" alt="twitter" />
+                            <a
+                              href="https://facebook.com/sharer.php?display=page&u=https://afrobarometer.vercel.app/"
+                              target="_blank"
+                            >
+                              <img
+                                src="./images/facebook-blue.png"
+                                alt="facebook-icon"
+                              />
+                            </a>
+                            <a href="https://www.instagram.com"  target="_blank">
+                              <img
+                                src="./images/instagram-blue.png"
+                                alt="instagram-icon"
+                                style={{marginLeft:"3px",marginRight:"3px"}}
+                              />
+                            </a>
+                            <a
+                              href="https://twitter.com/intent/tweet"
+                              target="_blank"
+                              data-size="large"
+                              data-text="Afrisight"
+                              data-url="https://afrobarometer.vercel.app/"
+                              data-hashtags="example,demo"
+                              data-via="twitterdev"
+                            >
+                              <img
+                                src="./images/twitter-blue.png"
+                                alt="twitter-icon"
+                              />
+                            </a>
                           </div>
                         </div>
                       </div>

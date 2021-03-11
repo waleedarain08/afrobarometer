@@ -27,13 +27,22 @@ export default function AboutUs() {
             <div className="authorname">Author Name</div>
             <div className="authorposition">Position</div>
             <div className="icons">
-              <img src="./images/Facebook.png" alt="facebook" />
+              <a
+                href="https://facebook.com/sharer.php?display=page&u=https://afrobarometer.vercel.app/"
+                target="_blank"
+              >
+                <img src="./images/Facebook.png" alt="facebook" />
+              </a>
+              <a href="https://twitter.com/tweet" target="_blank">
               <img
                 src="./images/Twitter.png"
                 alt="twitter"
                 className="twittericon"
               />
+              </a>
+              <a href="https://myaccount.google.com/" target="_blank">
               <img src="./images/Googlegra.png" alt="google +" />
+              </a>
             </div>
             <div className="research-button">
               <button className="transparent-button">Subscribe</button>
@@ -44,7 +53,10 @@ export default function AboutUs() {
           <div className="container">
             <div className="researchTopic-second-row ">
               <div className="row mx-0">
-                <img src="./images/research01.png" className="research-topic-img" />
+                <img
+                  src="./images/research01.png"
+                  className="research-topic-img"
+                />
               </div>
             </div>
           </div>
@@ -120,7 +132,10 @@ export default function AboutUs() {
                             value="privacy"
                             defaultChecked
                           />
-                          <label htmlFor="privacy" style={{marginLeft:"5px"}}>
+                          <label
+                            htmlFor="privacy"
+                            style={{ marginLeft: "5px" }}
+                          >
                             I have read and accepted the Privacy Policy*
                           </label>
                         </div>
@@ -133,7 +148,10 @@ export default function AboutUs() {
                             name="updates"
                             value="updated"
                           />
-                          <label htmlFor="updates" style={{marginLeft:"5px"}}>
+                          <label
+                            htmlFor="updates"
+                            style={{ marginLeft: "5px" }}
+                          >
                             I would like to receive news, updates and thought
                             leadership once in a while
                           </label>

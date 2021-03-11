@@ -2,8 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import { BaseUrl,ImageUrl } from "../public/constant";
-
+import { BaseUrl, ImageUrl } from "../public/constant";
 
 export default function Research({ data }) {
   return (
@@ -58,10 +57,15 @@ export default function Research({ data }) {
                       </div>
                       <div className="web-disabled">
                         <br />
-                        <img
-                          src="./images/facebook-blue.png"
-                          alt="facebook-icon"
-                        />
+                        <a
+                          href="https://facebook.com/sharer.php?display=page&u=https://afrobarometer.vercel.app/"
+                          target="_blank"
+                        >
+                          <img
+                            src="./images/facebook-blue.png"
+                            alt="facebook-icon"
+                          />
+                        </a>
                         <img
                           src="./images/instagram-blue.png"
                           alt="instagram-icon"
@@ -79,19 +83,39 @@ export default function Research({ data }) {
                       <div className="gradient-content">February 2021</div>
                     </div>
                     <div className="blue-icons">
-                      <img
-                        src="./images/facebook-blue.png"
-                        alt="facebook-icon"
-                      />{" "}
+                      <a
+                        href="https://facebook.com/sharer.php?display=page&u=https://afrobarometer.vercel.app/"
+                        target="_blank"
+                      >
+                        <img
+                          src="./images/facebook-blue.png"
+                          alt="facebook-icon"
+                        />
+                      </a>{" "}
                       <br />
                       <br />
-                      <img
-                        src="./images/instagram-blue.png"
-                        alt="instagram-icon"
-                      />{" "}
+                      <a href="https://www.instagram.com">
+                        <img
+                          src="./images/instagram-blue.png"
+                          alt="instagram-icon"
+                        />
+                      </a>{" "}
                       <br />
                       <br />
-                      <img src="./images/twitter-blue.png" alt="twitter-icon" />
+                      <a
+                        href="https://twitter.com/intent/tweet"
+                        target="_blank"
+                        data-size="large"
+                        data-text="Afrisight"
+                        data-url="https://afrobarometer.vercel.app/"
+                        data-hashtags="example,demo"
+                        data-via="twitterdev"
+                      >
+                        <img
+                          src="./images/twitter-blue.png"
+                          alt="twitter-icon"
+                        />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -100,24 +124,44 @@ export default function Research({ data }) {
           );
         } else {
           return (
-            <div  key={index} className="research-third-header">
+            <div key={index} className="research-third-header">
               <div className="container">
                 <div className="row mx-0">
                   <div className="col-md-5 research-icons">
-                    <div className="blue-icons-right">
-                      <img
-                        src="./images/facebook-blue.png"
-                        alt="facebook-icon"
-                      />{" "}
+                  <div className="blue-icons-right">
+                      <a
+                        href="https://facebook.com/sharer.php?display=page&u=https://afrobarometer.vercel.app/"
+                        target="_blank"
+                      >
+                        <img
+                          src="./images/facebook-blue.png"
+                          alt="facebook-icon"
+                        />
+                      </a>{" "}
                       <br />
                       <br />
-                      <img
-                        src="./images/instagram-blue.png"
-                        alt="instagram-icon"
-                      />{" "}
+                      <a href="https://www.instagram.com">
+                        <img
+                          src="./images/instagram-blue.png"
+                          alt="instagram-icon"
+                        />
+                      </a>{" "}
                       <br />
                       <br />
-                      <img src="./images/twitter-blue.png" alt="twitter-icon" />
+                      <a
+                        href="https://twitter.com/intent/tweet"
+                        target="_blank"
+                        data-size="large"
+                        data-text="Afrisight"
+                        data-url="https://afrobarometer.vercel.app/"
+                        data-hashtags="example,demo"
+                        data-via="twitterdev"
+                      >
+                        <img
+                          src="./images/twitter-blue.png"
+                          alt="twitter-icon"
+                        />
+                      </a>
                     </div>
                     <div className="photo-02">
                       <div className="gradient-content">February 2021</div>
@@ -140,10 +184,15 @@ export default function Research({ data }) {
                       </div>
                       <div className="web-disabled">
                         <br />
-                        <img
-                          src="./images/facebook-blue.png"
-                          alt="facebook-icon"
-                        />
+                        <a
+                          href="https://facebook.com/sharer.php?display=page&u=https://afrobarometer.vercel.app/"
+                          target="_blank"
+                        >
+                          <img
+                            src="./images/facebook-blue.png"
+                            alt="facebook-icon"
+                          />
+                        </a>
                         <img
                           src="./images/instagram-blue.png"
                           alt="instagram-icon"
@@ -220,12 +269,12 @@ export default function Research({ data }) {
 
 export async function getStaticProps() {
   const res = await fetch(`${BaseUrl}/research`)
-  .then(response => response.json())
-  .then(jsondata =>  jsondata  )
+    .then((response) => response.json())
+    .then((jsondata) => jsondata);
   const data = await res.research;
   return {
     props: {
       data,
     },
-  }
+  };
 }
