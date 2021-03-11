@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Afrobarometer</title>
@@ -99,7 +99,7 @@ export default function Home() {
           <div className="home-third-header ">
             <div className="main-div">
               <div className="row mx-0">
-                <div className="col-md-6 col-12">
+                <div style={{marginLeft:"10px"}} className="col-md-6 col-12">
                   <div className="home-third-content">
                     <div className="home--heading">Challenge</div>
                     <div className="home-third-author">

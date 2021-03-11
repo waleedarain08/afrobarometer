@@ -2,31 +2,32 @@ import Head from "next/head";
 import React, { useEffect, useState } from "react";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import { BaseUrl,ImageUrl} from "../public/constant";
+import { BaseUrl, ImageUrl } from "../public/constant";
 
-export default function RawData({data}) {
+export default function RawData({ data }) {
+  const [rawData, setRawData] = useState(data.raw_data);
+  const [search, setSearch] = useState("");
+  const [dataSource, setDataSource] = useState([]);
 
+  const filterRawData = (id) => {
+    fetch(`${BaseUrl}/raw-data/${id}`, {
+      method: "GET",
+    })
+      .then((response) => response.json())
+      .then((jsondata) => setRawData(jsondata.raw_data))
+      .catch((e) => e);
+  };
 
-  // useEffect( async()=>{
-  //   fetch(`${BaseUrl}/raw-data`)
-  //   .then(response => response.json())
-  //   .then(jsondata => console.log(jsondata))
-  // });
-  // const [rawData,setRawData] = useState([
-  //   {id:1,title:"hello",description:"lorem ispum",date:"2020/03.05",graph:"abc.jpg"}
-  // ]);
-  
-  // const callApi = async () => {
-  //   fetch(`${BaseUrl}/public/api/raw-data`, {
-  //     method: "GET",
-  //     headers: {
-  //       Accept: "application/json",
-  //       "Content-Type": "application/json",
-  //     },
-  //   })
-  //   .then((response) => setRawData(response.json()))
-  //   .catch((e) => e);
-  // };
+  const SearchFilterFunction = (text) => {
+    const newData = data.categories.filter(function (item) {
+      const itemData = item.name ? item.name.toUpperCase() : "".toUpperCase();
+      const textData = text.toUpperCase();
+      return itemData.indexOf(textData) > -1;
+    });
+
+    setDataSource(newData);
+    setSearch(text);
+  };
 
   return (
     <>
@@ -34,7 +35,10 @@ export default function RawData({data}) {
         <title>Afrobarometer</title>
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta httpEquiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="upgrade-insecure-requests"
+        />
         <title>Raw Data</title>
       </Head>
       <Header />
@@ -56,7 +60,6 @@ export default function RawData({data}) {
               </div>
             </div>
             <div className="col-md-5 home-photo col-12">
-              
               <img
                 src="./images/rawdata-header.png"
                 alt="photo"
@@ -84,24 +87,47 @@ export default function RawData({data}) {
                   />
                   <input
                     placeholder="Search by name"
+                    value={search}
+                    onChange={(e) => SearchFilterFunction(e.target.value)}
+                    //onClear={() => SearchFilterFunction("")}
                     className="input-field-searchbyname"
                   />
                 </div>
-                <div className="show-all-div">
+                {/* <div className="show-all-div">
                   <span className="checkbox-icon">
                     <img src="./images/Path.png" alt="" />
                   </span>
                   <span className="show">Show All</span>
-                </div>
+                </div> */}
               </div>
               <div className="row mx-0">
-                <span className="text-button">Popular</span>
+                <span className="text-button">Category</span>
               </div>
               <div>
-                <button className="non-selected-btn rawdata-buttons">
-                  Democracy
-                </button>
-                <button className="selected-btn rawdata-buttons">
+                {dataSource && dataSource.length > 0
+                  ? dataSource.map((item, index) => {
+                      return (
+                        <button
+                          key={index}
+                          onClick={() => filterRawData(item.id)}
+                          className="non-selected-btn rawdata-buttons"
+                        >
+                          {item.name}
+                        </button>
+                      );
+                    })
+                  : data.categories.map((item, index) => {
+                      return (
+                        <button
+                          key={index}
+                          onClick={() => filterRawData(item.id)}
+                          className="non-selected-btn rawdata-buttons"
+                        >
+                          {item.name}
+                        </button>
+                      );
+                    })}
+                {/* <button className="selected-btn rawdata-buttons">
                   Democracy
                 </button>
                 <button className="selected-btn rawdata-buttons">
@@ -112,9 +138,9 @@ export default function RawData({data}) {
                 </button>
                 <button className="non-selected-btn rawdata-buttons">
                   Democracy
-                </button>
+                </button> */}
               </div>
-              <div className="row mx-0">
+              {/* <div className="row mx-0">
                 <span className="text-button">Category Name</span>
               </div>
               <div>
@@ -124,47 +150,46 @@ export default function RawData({data}) {
                 <button className="non-selected-btn rawdata-buttons">
                   Democracy
                 </button>
-              </div>
+              </div> */}
             </div>
           </div>
           <div className="col-md-7">
             <div className="row mx-0">
-            {data.map((item,index)=>{
-            return (
-              <div key={index} className="col-md-6">
-                <div className="insight">
-                  <div className="insight-image">
-                    <img
-                      src={`${ImageUrl}/${item.graph}`}
-                      alt="insight number 01"
-                      className="raw-data-pic"
-                    />
-                  </div>
-                  <div className="container">
-                    <p className="insight-heading">{item.title}</p>
-                    <p className="insight-research-date">
-                      Date of research: {item.date}
-                    </p>
-                    <p className="insight-text">
-                      {item.description}
-                    </p>
-                    <br />
-                    <div className="insight-footer">
-                      <p className="insight-share">SHARE insight:</p>
-                      <div className="insight-icons">
-                        <img src="./images/Facebook.png" alt="facebook" />
+              {rawData.map((item, index) => {
+                return (
+                  <div key={index} className="col-md-6">
+                    <div className="insight">
+                      <div className="insight-image">
                         <img
-                          src="./images/Instagram.png"
-                          alt="Instagram"
-                          className="insta-icon"
+                          src={`${ImageUrl}/${item.graph}`}
+                          alt="insight number 01"
+                          className="raw-data-pic"
                         />
-                        <img src="./images/Twitter.png" alt="twitter" />
+                      </div>
+                      <div className="container">
+                        <p className="insight-heading">{item.title}</p>
+                        <p className="insight-research-date">
+                          Date of research: {item.date}
+                        </p>
+                        <p className="insight-text">{item.description}</p>
+                        <br />
+                        <div className="insight-footer">
+                          <p className="insight-share">SHARE insight:</p>
+                          <div className="insight-icons">
+                            <img src="./images/Facebook.png" alt="facebook" />
+                            <img
+                              src="./images/Instagram.png"
+                              alt="Instagram"
+                              className="insta-icon"
+                            />
+                            <img src="./images/Twitter.png" alt="twitter" />
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-            )})}
+                );
+              })}
             </div>
             {/* <div className="row mx-0 insight-cards-second-row">
               <div className="col-md-6">
@@ -248,13 +273,12 @@ export default function RawData({data}) {
 
 export async function getStaticProps() {
   const res = await fetch(`${BaseUrl}/raw-data`)
-  .then(response => response.json())
-  .then(jsondata =>  jsondata  )
-  const data = await res.raw_data;
+    .then((response) => response.json())
+    .then((jsondata) => jsondata);
+  const data = await res;
   return {
     props: {
       data,
     },
-  }
+  };
 }
-
