@@ -5,6 +5,9 @@
         padding: 0px;
     } */
 
+    .challenge{
+        margin-left: 10px;
+    }
     /*--------- navbar Start ----------*/
     .main-nav {
         display: flex;

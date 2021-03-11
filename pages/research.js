@@ -42,7 +42,7 @@ export default function Research({ data }) {
               <div className="container">
                 <div className="row mx-0">
                   <div className="col-md-7">
-                    <div className="research-second-content">
+                    <div className="">
                       <div className="research-rawdata-heading">
                         {item.title}
                       </div>
@@ -124,7 +124,7 @@ export default function Research({ data }) {
                     </div>
                   </div>
                   <div className="col-md-7">
-                    <div className="research-second-content right-box-padding">
+                    <div className="right-box-padding">
                       <div className="research-rawdata-heading">
                         {item.title}
                       </div>

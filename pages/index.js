@@ -99,7 +99,7 @@ export default function Home() {
           <div className="home-third-header ">
             <div className="main-div">
               <div className="row mx-0">
-                <div style={{marginLeft:"10px"}} className="col-md-6 col-12">
+                <div className="col-md-6 col-12 challenge">
                   <div className="home-third-content">
                     <div className="home--heading">Challenge</div>
                     <div className="home-third-author">
